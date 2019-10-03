@@ -115,10 +115,7 @@ func main() {
 				if oldValue != "sensitive" && oldValue != "computed" && oldValue != "<computed" {
 					oldValue = strings.Repeat(tfmaskChar, utf8.RuneCountInString(oldValue))
 				}
-				// The value inside the "..." or <...>
-				// if newValue != "sensitive" && newValue != "computed" && newValue != "<computed" {
-				// 	newValue = strings.Repeat(tfmaskChar, utf8.RuneCountInString(newValue))
-				// }
+
 				fmt.Printf("%v%v:%v%v%v%v\n",
 					leadingWhitespace, property, trailingWhitespace, firstQuote, oldValue, secondQuote)
 			} else {
